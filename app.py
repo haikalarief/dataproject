@@ -4,6 +4,7 @@ import plotly.express as px
 import seaborn as sns
 import matplotlib.pyplot as plt
 import numpy as np
+from PIL import Image 
 
 st.set_page_config(page_title="World Happiness Score", layout="wide")
 #load gambar
