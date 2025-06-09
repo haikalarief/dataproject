@@ -9,7 +9,8 @@ from PIL import Image
 st.set_page_config(page_title="World Happiness Score", layout="wide")
 #load gambar
 image = Image.open("world happiness.jpg")
-st.image(image, use_column_width=True)
+st.image(image, use_container_width=True)
+
 #load cleaned data
 df = pd.read_csv("cleaned_happiness.csv")
 
