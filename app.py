@@ -10,7 +10,7 @@ st.set_page_config(page_title="World Happiness Score", layout="wide")
 #load cleaned data
 df = pd.read_csv("cleaned_happiness.csv")
 
-st.title("🌍 World Happiness Report Dashboard")
+st.title("🌍 World HappinessDashboard")
 
 #sidebar utk filter data
 st.sidebar.header("Filter Options")
