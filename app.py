@@ -71,6 +71,19 @@ fig, ax = plt.subplots(figsize=(10, 7))
 sns.heatmap(corr_df, annot=True, cmap="coolwarm", ax=ax, fmt=".2f")
 st.pyplot(fig)
 
+st.markdown(
+    """
+    **What does this heatmap show?**  
+    This heatmap reveals the strength and direction of relationships between the numerical variables in the dataset.  
+    - A value close to **+1** indicates a strong **positive** correlation (as one increases, so does the other).  
+    - A value near **-1** indicates a strong **negative** correlation (as one increases, the other decreases).  
+    - Values near **0** suggest little to no correlation.  
+
+    For example, you might notice that **GDP per Capita** is strongly correlated with **Happiness Score**,  
+    while **Generosity** might show a weaker or even inverse trend.  
+    """
+)
+
 #happiness score on world map
 st.subheader("🌏 World Happiness Scores Map")
 
