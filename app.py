@@ -6,11 +6,20 @@ import matplotlib.pyplot as plt
 import numpy as np
 
 st.set_page_config(page_title="World Happiness Score", layout="wide")
-
+#load gambar
+image = Image.open("happy_world.png")
+st.image(image, use_column_width=True)
 #load cleaned data
 df = pd.read_csv("cleaned_happiness.csv")
 
 st.title("🌍 World Happiness Dashboard")
+
+#display avergae score and gdp
+avg_score = df['score'].mean()
+avg_gdp = df['gdp_per_capita'].mean()
+st.markdown(f"### 📈 Global Averages")
+st.write(f"**Average Happiness Score:** {avg_score:.2f}")
+st.write(f"**Average GDP per Capita:** {avg_gdp:.2f}")
 
 #sidebar utk filter data
 st.sidebar.header("Filter Options")
