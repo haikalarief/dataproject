@@ -38,6 +38,13 @@ filtered_df = df[df['country_or_region'].isin(countries)]
 st.subheader("📊 Filtered Data Table")
 st.dataframe(filtered_df)
 
+sns.histplot(df['score'], bins=30, kde=True, color='teal')
+plt.title('Distribution of Happiness Scores')
+plt.xlabel('Happiness Score')
+plt.ylabel('Frequency')
+plt.show()
+#graph of happiness score distribution
+
 #scatter plot
 #intechangable on the x-axis and y-axis by data chosen from sidebar
 st.markdown(
