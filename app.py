@@ -7,7 +7,7 @@ import numpy as np
 
 st.set_page_config(page_title="World Happiness Score", layout="wide")
 #load gambar
-image = Image.open("WhatsApp Image 2025-06-09 at 14.29.41_5c7d8dfb.JPG")
+image = Image.open("world happiness.jpg")
 st.image(image, use_column_width=True)
 #load cleaned data
 df = pd.read_csv("cleaned_happiness.csv")
