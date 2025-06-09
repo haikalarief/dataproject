@@ -52,13 +52,7 @@ st.pyplot(fig)
 
 #scatter plot
 #intechangable on the x-axis and y-axis by data chosen from sidebar
-st.markdown(
-    """
-    **How to use this scatter plot:**  
-    Use the dropdown menus below to select which variables you'd like to plot on the X and Y axes.  
-    For example, try plotting **GDP per Capita** against **Score** to see if wealth relates to happiness.  
-    """
-)
+
 st.subheader(f"📈 {y_axis.title()} vs {x_axis.title()}")
 fig_scatter = px.scatter(
     filtered_df,
@@ -71,7 +65,13 @@ fig_scatter = px.scatter(
     title=f"{y_axis.replace('_', ' ').title()} vs {x_axis.replace('_', ' ').title()}"
 )
 st.plotly_chart(fig_scatter, use_container_width=True)
-
+st.markdown(
+    """
+    **How to use this scatter plot:**  
+    Use the dropdown menus below to select which variables you'd like to plot on the X and Y axes.  
+    For example, try plotting **GDP per Capita** against **Score** to see if wealth relates to happiness.  
+    """
+)
 #data correlation heatmap
 st.subheader("🔥 Correlation Heatmap of Happiness Factors")
 
